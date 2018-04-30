@@ -1,18 +1,16 @@
-//
-//  ViewController.swift
-//  HelloOpenCV
-//
-//  Created by Azam Baderi on 29/04/2018.
-//  Copyright © 2018 Twebble. All rights reserved.
-//
+
+// Source: https://medium.com/@yiweini/opencv-with-swift-step-by-step-c3cc1d1ee5f1
 
 import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var rioImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        print("\(OpenCVWrapper.openCVVersionString()!)")
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +18,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func convertToGrayscale(_ sender: Any) {
+        rioImageView.image = OpenCVWrapper.makeGray(from: rioImageView.image)
+    }
+    
 }
 

@@ -12,6 +12,13 @@
 		C5AA671F2094E47300464756 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5AA671D2094E47300464756 /* Main.storyboard */; };
 		C5AA67212094E47800464756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5AA67202094E47800464756 /* Assets.xcassets */; };
 		C5AA67242094E47800464756 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5AA67222094E47800464756 /* LaunchScreen.storyboard */; };
+		C5AA672E2094E49D00464756 /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = C5AA672D2094E49D00464756 /* OpenCVWrapper.mm */; };
+		C5AA67312094E4E700464756 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5AA67302094E4E700464756 /* opencv2.framework */; };
+		C5AA67332094E50000464756 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5AA67322094E50000464756 /* AssetsLibrary.framework */; };
+		C5AA67352094E50800464756 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5AA67342094E50800464756 /* CoreGraphics.framework */; };
+		C5AA67372094E51000464756 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5AA67362094E51000464756 /* CoreMedia.framework */; };
+		C5AA67392094E51500464756 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5AA67382094E51500464756 /* CoreFoundation.framework */; };
+		C5AA673B2094E51C00464756 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5AA673A2094E51C00464756 /* Accelerate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,16 @@
 		C5AA67202094E47800464756 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5AA67232094E47800464756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5AA67252094E47800464756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5AA672B2094E49D00464756 /* HelloOpenCV-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloOpenCV-Bridging-Header.h"; sourceTree = "<group>"; };
+		C5AA672C2094E49D00464756 /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		C5AA672D2094E49D00464756 /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
+		C5AA67302094E4E700464756 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = HelloOpenCV/opencv2.framework; sourceTree = "<group>"; };
+		C5AA67322094E50000464756 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		C5AA67342094E50800464756 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C5AA67362094E51000464756 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		C5AA67382094E51500464756 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		C5AA673A2094E51C00464756 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		C5AA673C2094E5A400464756 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +46,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5AA673B2094E51C00464756 /* Accelerate.framework in Frameworks */,
+				C5AA67392094E51500464756 /* CoreFoundation.framework in Frameworks */,
+				C5AA67372094E51000464756 /* CoreMedia.framework in Frameworks */,
+				C5AA67352094E50800464756 /* CoreGraphics.framework in Frameworks */,
+				C5AA67332094E50000464756 /* AssetsLibrary.framework in Frameworks */,
+				C5AA67312094E4E700464756 /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +63,7 @@
 			children = (
 				C5AA67182094E47300464756 /* HelloOpenCV */,
 				C5AA67172094E47300464756 /* Products */,
+				C5AA672F2094E4E700464756 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +80,29 @@
 			children = (
 				C5AA67192094E47300464756 /* AppDelegate.swift */,
 				C5AA671B2094E47300464756 /* ViewController.swift */,
+				C5AA672C2094E49D00464756 /* OpenCVWrapper.h */,
+				C5AA672D2094E49D00464756 /* OpenCVWrapper.mm */,
+				C5AA673C2094E5A400464756 /* PrefixHeader.pch */,
 				C5AA671D2094E47300464756 /* Main.storyboard */,
 				C5AA67202094E47800464756 /* Assets.xcassets */,
 				C5AA67222094E47800464756 /* LaunchScreen.storyboard */,
 				C5AA67252094E47800464756 /* Info.plist */,
+				C5AA672B2094E49D00464756 /* HelloOpenCV-Bridging-Header.h */,
 			);
 			path = HelloOpenCV;
+			sourceTree = "<group>";
+		};
+		C5AA672F2094E4E700464756 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5AA673A2094E51C00464756 /* Accelerate.framework */,
+				C5AA67382094E51500464756 /* CoreFoundation.framework */,
+				C5AA67362094E51000464756 /* CoreMedia.framework */,
+				C5AA67342094E50800464756 /* CoreGraphics.framework */,
+				C5AA67322094E50000464756 /* AssetsLibrary.framework */,
+				C5AA67302094E4E700464756 /* opencv2.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +137,7 @@
 				TargetAttributes = {
 					C5AA67152094E47300464756 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -137,6 +179,7 @@
 			files = (
 				C5AA671C2094E47300464756 /* ViewController.swift in Sources */,
 				C5AA671A2094E47300464756 /* AppDelegate.swift in Sources */,
+				C5AA672E2094E49D00464756 /* OpenCVWrapper.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +323,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B94C7U72JS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HelloOpenCV",
+				);
 				INFOPLIST_FILE = HelloOpenCV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -289,6 +337,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.twebble.HelloOpenCV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloOpenCV/HelloOpenCV-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -298,8 +348,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B94C7U72JS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HelloOpenCV",
+				);
 				INFOPLIST_FILE = HelloOpenCV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,6 +362,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.twebble.HelloOpenCV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloOpenCV/HelloOpenCV-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
